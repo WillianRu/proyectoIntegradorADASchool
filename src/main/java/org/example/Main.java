@@ -1,5 +1,11 @@
-package org.example;public class Main {
+package org.example;
+
+public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        String name;
+        String description;
+        String category;
+        String label;
+        int price;
     }
 }
