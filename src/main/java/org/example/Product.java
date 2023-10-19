@@ -1,62 +1,28 @@
 package org.example;
 
 public class Product {
-    private String name;
-    private double price;
-    private int stock;
+    private int idProduct;
+    private String productName;
+    private String description;
+    private String category;
+    private String label;
+    private String urlPhoto;
+    private Double price;
 
-    public Product(String name, double price, int stock) {
-        this.name = name;
-        this.price = price;
-        this.stock = stock;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
+    // Constructor
+    public Product(String productName, String description, String category, String label, String urlPhoto, Double price) {
+        this.productName = productName;
+        this.description = description;
+        this.category = category;
+        this.label = label;
+        this.urlPhoto = urlPhoto;
         this.price = price;
     }
 
-    public int getStock() {
-        return stock;
-    }
-
-    public void setStock(int stock) {
-        this.stock = stock;
-    }
-
-    public boolean isOutOfStock() {
-        return stock == 0;
-    }
-
-    public boolean isPriceGreaterThan(double value) {
-        return price > value;
-    }
-
-    public boolean isPriceLessThanOrEqual(double value) {
-        return price <= value;
-    }
-
+    // Buscar producto
     public boolean doesNameContain(String word) {
-        return name.toLowerCase().contains(word.toLowerCase());
+        return productName.toLowerCase().contains(word.toLowerCase());
     }
-
-    @Override
-    public String toString() {
-        return "{ 'name':" + name + ", price:" + price + ", stock:" + stock + "}";
-    }
-
-
 }
 
 
