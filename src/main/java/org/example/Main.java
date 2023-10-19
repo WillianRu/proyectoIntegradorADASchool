@@ -5,18 +5,19 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        runMenu();
+        Store store = new Store ();
+        runMenu(store);
     }
 
     // Mostrar menu
-    public static void runMenu() {
+    public static void runMenu(Store store) {
         int choice;
         Scanner scanner = new Scanner(System.in);
         do {
             displayMenu();
             choice = scanner.nextInt();
             scanner.nextLine(); // Consume the newline character
-            handleUserChoice(choice);
+            handleUserChoice(choice, store);
         } while (choice != 8);
     }
 
@@ -45,12 +46,13 @@ public class Main {
         System.out.print("   Ingresa tu opción:    (1 - 5)  ");
     }
 
-    public static void handleUserChoice(int choice) {
+    public static void handleUserChoice(int choice, Store store) {
         switch (choice) {
-            case 1 -> addProduct();
+            case 1 -> store.addProduct();
             case 2 -> removeProduct();
             case 3 -> updateProduct();
-            case 4 -> System.out.println("Saliendo...");
+            case 4 -> store.displayProducts(store);
+            case 5 -> System.out.println("Saliendo ...");
             default -> System.out.println("Opción invalida. Por favor intenta de nuevo.");
         }
 
@@ -59,10 +61,6 @@ public class Main {
 
 
     // otras funcionalidades
-
-    public static void addProduct(){
-        System.out.println("Producto agregado");
-    }
 
     public static void removeProduct(){
         System.out.println("Producto eliminado");

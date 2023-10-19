@@ -23,6 +23,21 @@ public class Product {
     public boolean doesNameContain(String word) {
         return productName.toLowerCase().contains(word.toLowerCase());
     }
+
+    // Convertir a texto
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "idProduct=" + idProduct +
+                ", productName='" + productName + '\'' +
+                ", description='" + description + '\'' +
+                ", category='" + category + '\'' +
+                ", label='" + label + '\'' +
+                ", urlPhoto='" + urlPhoto + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }
 
 
