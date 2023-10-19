@@ -10,7 +10,8 @@ public class Product {
     private Double price;
 
     // Constructor
-    public Product(String productName, String description, String category, String label, String urlPhoto, Double price) {
+    public Product(int idProduct, String productName, String description, String category, String label, String urlPhoto, Double price) {
+        this.idProduct = idProduct;
         this.productName = productName;
         this.description = description;
         this.category = category;
@@ -37,6 +38,35 @@ public class Product {
                 ", urlPhoto='" + urlPhoto + '\'' +
                 ", price=" + price +
                 '}';
+    }
+
+    // getters
+    public int getIdProduct() {
+        return idProduct;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public String getUrlPhoto() {
+        return urlPhoto;
+    }
+
+    public Double getPrice() {
+        return price;
     }
 }
 

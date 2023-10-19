@@ -6,10 +6,12 @@ import java.util.Scanner;
 
 public class Store {
     private List<Product> products;
+    private int currentId;
 
     //Constructor
     public Store() {
         this.products = new ArrayList<>();
+        this.currentId = 1;
     }
 
     // funcionalidades
@@ -35,10 +37,50 @@ public class Store {
         System.out.println("Ingrese el precio del producto: ");
         double price = scanner.nextDouble();
 
-        Product product = new Product(productName, description, category, label, urlPhoto, price);
+        Product product = new Product(currentId, productName, description, category, label, urlPhoto, price);
         products.add(product);
+        currentId ++;
 
         System.out.println("Producto agregado con éxito.");
+    }
+
+    public void removeProduct(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese el ID del producto a eliminar: ");
+        int productId = scanner.nextInt();
+
+        for (int i= 0; i<products.size(); i++){
+            if(products.get(i).getIdProduct()==productId){
+                products.remove(i);
+                System.out.println("Producto eliminado con éxito.");
+                return;
+            }
+        }
+        System.out.println("Producto no encontrado en el inventario.");
+    }
+
+    public void updateProduct(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese el ID del producto por actualizar: ");
+        int productId = scanner.nextInt();
+
+        for (int i= 0; i<products.size(); i++) {
+            if (products.get(i).getIdProduct() == productId) {
+                Scanner scan = new Scanner(System.in);
+                System.out.println("Ingrese el nombre del producto: ");
+                String productName = scan.nextLine();
+
+                System.out.println("Ingrese el precio del producto: ");
+                double price = scan.nextDouble();
+
+                Product product = new Product(products.get(i).getIdProduct(), productName, products.get(i).getDescription(), products.get(i).getCategory(), products.get(i).getLabel(), products.get(i).getUrlPhoto(), price);
+                products.add(product);
+                return;
+            }
+        }
+        System.out.println("Producto no encontrado en el inventario.");
     }
 
     public void displayProducts(Store store){

@@ -49,8 +49,8 @@ public class Main {
     public static void handleUserChoice(int choice, Store store) {
         switch (choice) {
             case 1 -> store.addProduct();
-            case 2 -> removeProduct();
-            case 3 -> updateProduct();
+            case 2 -> store.removeProduct();
+            case 3 -> store.updateProduct();
             case 4 -> store.displayProducts(store);
             case 5 -> System.out.println("Saliendo ...");
             default -> System.out.println("Opción invalida. Por favor intenta de nuevo.");
@@ -61,14 +61,6 @@ public class Main {
 
 
     // otras funcionalidades
-
-    public static void removeProduct(){
-        System.out.println("Producto eliminado");
-    }
-
-    public static void updateProduct(){
-        System.out.println("Producto actualizado");
-    }
 
 
 
