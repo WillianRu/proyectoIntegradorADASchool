@@ -76,7 +76,7 @@ public class Store {
                 double price = scan.nextDouble();
 
                 Product product = new Product(products.get(i).getIdProduct(), productName, products.get(i).getDescription(), products.get(i).getCategory(), products.get(i).getLabel(), products.get(i).getUrlPhoto(), price);
-                products.add(product);
+                products.set(i, product);
                 return;
             }
         }

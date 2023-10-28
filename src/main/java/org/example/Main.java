@@ -1,6 +1,5 @@
 package org.example;
 import java.util.Scanner;
-//import Product.java;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,17 +22,6 @@ public class Main {
 
     public static void displayMenu() {
 
-        System.out.println(
-                """
-                        |o|                         /////////////\\\\\\
-                        |o|                        (((((((((((((   \\\\\\
-                        |o|                        ))) ~~      ~~   (((
-                        |o|                        ((( (*)     (*)  )))
-                        |o|                        )))     <        (((\s
-                        |o|                        ((( '\\______/`   )))\s
-                        |o|                        )))\\___________/(((\s
-                        |o|                        (((   _)  (_    )))\s\s
-                        |o|                              /\\__/\\""");
         System.out.println("±----------------------------------------±");
         System.out.println("|   Administrador Mi Tienda de Barrio    |");
         System.out.println("±----------------------------------------±");
@@ -57,13 +45,6 @@ public class Main {
         }
 
     }
-
-
-
-    // otras funcionalidades
-
-
-
 
 
 }
