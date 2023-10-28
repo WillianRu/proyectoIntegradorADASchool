@@ -82,6 +82,13 @@ public class Store {
                 double price = scan.nextDouble();
 
                 Product product = new Product(products.get(i).getIdProduct(), productName, products.get(i).getDescription(), products.get(i).getCategory(), products.get(i).getLabel(), products.get(i).getUrlPhoto(), price);
+
+                System.out.println("Ingrese el stock del producto: ");
+                int stock = scanner.nextInt();
+
+                Stock productStock = new Stock(product, stock);
+                product.addStock(productStock);
+
                 products.set(i, product);
                 return;
             }
