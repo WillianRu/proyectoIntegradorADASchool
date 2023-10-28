@@ -39,6 +39,12 @@ public class Store {
 
         Product product = new Product(currentId, productName, description, category, label, urlPhoto, price);
         products.add(product);
+
+        System.out.println("Ingrese el stock del producto: ");
+        int stock = scanner.nextInt();
+
+        Stock productStock = new Stock(product, stock);
+        product.addStock(productStock);
         currentId ++;
 
         System.out.println("Producto agregado con éxito.");
@@ -89,7 +95,16 @@ public class Store {
         } else {
             System.out.println("Productos en el inventario: ");
             for (Product product : products) {
-                System.out.println(product.toString());
+                List<Stock> stocks = product.getStocks();
+                for (Stock stock : stocks) {
+                    System.out.println("ID: " + product.getIdProduct() +
+                            ", Nombre: " + product.getProductName() +
+                            ", Descripción: " + product.getDescription() +
+                            ", Categoría: " + product.getCategory() +
+                            ", Etiqueta: " + product.getLabel() +
+                            ", URL de la foto: " + product.getUrlPhoto() +
+                            ", Stock: " + stock.getStock());
+                }
             }
         }
     }
