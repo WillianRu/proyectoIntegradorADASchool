@@ -110,7 +110,8 @@ public class Store {
                             ", Categoría: " + product.getCategory() +
                             ", Etiqueta: " + product.getLabel() +
                             ", URL de la foto: " + product.getUrlPhoto() +
-                            ", Stock: " + stock.getStock());
+                            ", Stock: " + stock.getStock() +
+                            ", Precio: " + product.getPrice());
                 }
             }
         }
