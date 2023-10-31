@@ -42,10 +42,10 @@ public class Main {
             case 1 -> store.addProduct();
             case 2 -> store.removeProduct();
             case 3 -> store.updateProduct();
-            case 4 -> store.displayProducts(store);
+            case 4 -> store.displayProducts(/*store*/);
             case 5 -> {
                 customer.inputCustomerData();
-                store.displayProducts(store);
+                store.displayProducts(/*store*/);
                 Bill bill = new Bill();
                 customer.buyProduct(store, bill);
                 System.out.println(bill.toString());

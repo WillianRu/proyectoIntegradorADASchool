@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28b0190f-2512-4447-b4f0-7d45497af0b2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ProductServiceI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Bill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Store.java" afterDir="false" />
     </list>
@@ -22,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>

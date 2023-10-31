@@ -25,11 +25,6 @@ public class Product {
         this.stocks = new ArrayList<>();
     }
 
-    // Buscar producto
-    public boolean doesNameContain(String word) {
-        return productName.toLowerCase().contains(word.toLowerCase());
-    }
-
     // Agregar producto
 
     public void addStock(Stock stock) {

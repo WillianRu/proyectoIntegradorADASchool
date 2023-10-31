@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Store {
+public class Store implements ProductServiceI{
     private List<Product> products;
     private int currentId;
 
@@ -96,7 +96,7 @@ public class Store {
         System.out.println("Producto no encontrado en el inventario.");
     }
 
-    public void displayProducts(Store store){
+    public void displayProducts(){
         if (products.isEmpty()) {
             System.out.println("El inventario está vacío.");
         } else {
@@ -116,6 +116,7 @@ public class Store {
             }
         }
     }
+
     // getters
     public List<Product> getProducts() {
         return products;
